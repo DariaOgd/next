@@ -1,0 +1,66 @@
+[
+    {
+      "id": 6,
+      "name": "Organic Matcha",
+      "category": "Matcha",
+      "subcategory": "Organic",
+      "price": 29.99,
+      "image": "/products/matcha1.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod sapien vel velit suscipit, a gravida odio feugiat."
+    },
+    {
+      "id": 7,
+      "name": "Matcha Powder",
+      "category": "Matcha",
+      "subcategory": "Powder",
+      "price": 18.99,
+      "image": "/products/matcha2.jpg",
+      "desc": "Praesent quis nisl eget turpis consequat feugiat. Aliquam erat volutpat. Fusce scelerisque libero sed sapien tincidunt."
+    },
+    {
+      "id": 8,
+      "name": "Hojicha Tea Leaves",
+      "category": "Hojicha",
+      "subcategory": "Leaves",
+      "price": 22.99,
+      "image": "/products/hojicha1.jpg",
+      "desc": "Duis at nulla in libero fermentum fringilla. Nam vehicula ex eget purus elementum, et ultricies erat vehicula."
+    },
+    {
+      "id": 9,
+      "name": "Matcha Latte Kit",
+      "category": "Kits",
+      "subcategory": "Latte",
+      "price": 39.99,
+      "image": "/products/kit1.jpg",
+      "desc": "Etiam vel orci ac augue dapibus vulputate. Nulla facilisi. Curabitur eleifend sem nec orci dapibus."
+    },
+    {
+      "id": 10,
+      "name": "Hojicha Latte Kit",
+      "category": "Kits",
+      "subcategory": "Latte",
+      "price": 34.99,
+      "image": "/images/hojicha-latte-kit.jpg",
+      "desc": "Vestibulum molestie elit et nisi elementum, ut scelerisque eros ultricies. Nam auctor vel erat non consequat."
+    },
+    {
+      "id": 11,
+      "name": "Traditional Matcha Set",
+      "category": "Kits",
+      "subcategory": "Traditional",
+      "price": 59.99,
+      "image": "/images/traditional-matcha-set.jpg",
+      "desc": "Phasellus in turpis id purus vehicula congue. Donec vulputate erat at diam ultrices, at dignissim metus lacinia."
+    },
+    {
+      "id": 12,
+      "name": "Matcha Sifter",
+      "category": "Accessories",
+      "subcategory": "Tools",
+      "price": 12.99,
+      "image": "/images/matcha-sifter.jpg",
+      "desc": "Mauris vel magna eget eros vehicula venenatis. Suspendisse potenti. Curabitur aliquam lacus sed metus."
+    }
+
+]
