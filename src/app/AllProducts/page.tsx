@@ -2,21 +2,26 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import next/image
+import Image from 'next/image'; 
 import products from '../../../public/data/products.json';
 import Navigation from '../components/Navigation';
 
 const AllProducts = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [sortOrder, setSortOrder] = useState('default');
 
-  // Pobierz unikalne kategorie i dodaj opcję "Show All"
   const categories = ["Show All", ...new Set(products.map(product => product.category))];
 
-  // Filtruj produkty według wybranej kategorii
-  const filteredProducts =
+  let filteredProducts =
     selectedCategory && selectedCategory !== "Show All"
       ? products.filter(product => product.category === selectedCategory)
       : products;
+
+  if (sortOrder === 'expensive') {
+    filteredProducts = [...filteredProducts].sort((a, b) => b.price - a.price);
+  } else if (sortOrder === 'cheap') {
+    filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
+  }
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -27,8 +32,8 @@ const AllProducts = () => {
           All Products
         </h1>
 
-        {/* Lista przycisków kategorii */}
-        <div className="flex justify-center flex-wrap gap-4 mb-8">
+  
+        <div className="flex justify-center flex-wrap gap-4 mb-6">
           {categories.map(category => (
             <button
               key={category}
@@ -44,7 +49,20 @@ const AllProducts = () => {
           ))}
         </div>
 
-        {/* Wyświetlanie produktów */}
+      
+        <div className="flex justify-end mb-8">
+          <select
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+            className="px-4 py-2 border border-green-600 rounded-lg bg-white text-green-900 shadow focus:outline-none"
+          >
+            <option value="default">Default</option>
+            <option value="expensive">Price: High to Low</option>
+            <option value="cheap">Price: Low to High</option>
+          </select>
+        </div>
+
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map(product => (
             <Link href={`/products/${product.id}`} key={product.id}>

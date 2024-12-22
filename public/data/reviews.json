@@ -1,0 +1,28 @@
+[
+    {
+      "productId": 6,
+      "reviews": [
+        {
+          "username": "Alice",
+          "rating": 5,
+          "comment": "Amazing matcha! The flavor is rich and authentic."
+        },
+        {
+          "username": "John",
+          "rating": 4,
+          "comment": "Good quality, but a bit pricey."
+        }
+      ]
+    },
+    {
+      "productId": 7,
+      "reviews": [
+        {
+          "username": "Emma",
+          "rating": 4,
+          "comment": "Perfect for making lattes at home."
+        }
+      ]
+    }
+  ]
+  
