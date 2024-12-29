@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useCart } from '@/app/context/cartContext';
 import Navigation from '@/app/components/Navigation';
+import Footer from '@/app/components/Footer';
 
 interface Review {
   username: string;
@@ -137,7 +138,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <select
                   value={selectedWeight}
                   onChange={(e) => setSelectedWeight(e.target.value)}
-                  className="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+                  className="mt-1 block w-full text-green-900 p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
                 >
                   <option value="50">50g</option>
                   <option value="100">100g</option>
@@ -233,6 +234,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           </button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

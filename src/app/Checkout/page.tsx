@@ -3,6 +3,7 @@
 import { useCart } from '@/app/context/cartContext';
 import { useState } from 'react';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function CheckoutPage() {
   const { cart } = useCart(); 
@@ -151,6 +152,7 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

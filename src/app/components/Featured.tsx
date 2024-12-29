@@ -33,39 +33,42 @@ export default function Featured() {
           >
             {products.slice(0, 3).map((product) => (
               <motion.div
-                key={product.id}
-                className="bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <Link href={`/products/${product.id}`}>
-                  <div className="cursor-pointer">
+              key={product.id}
+              className="card"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Link href={`/products/${product.id}`}>
+                <div className="cursor-pointer justify-center">
+                  <div className="flex justify-center">
                     <Image
                       src={product.image}
                       alt={product.name}
                       width={300}
                       height={200}
-                      className="rounded-t-lg object-cover"
+                      className="card-img"
                     />
-                    <div className="p-4">
-                      <h3 className="text-lg font-bold text-green-900">{product.name}</h3>
-                      <p className="text-green-700 font-semibold mt-2">
-                        ${product.price.toFixed(2)}
-                      </p>
-                      <motion.p
-                        whileHover={{ scale: 1.1 }}
-                        className="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-                      >
-                        View Product
-                      </motion.p>
-                    </div>
                   </div>
-                </Link>
-              </motion.div>
+                  <div className="p-4 flex flex-col sm:flex-row justify-between gap-4">
+                    <div className="flex flex-col items-center sm:items-start">
+                      <h3 className="text-lg font-bold text-green-900">{product.name}</h3>
+                      <p className="text-green-700 font-semibold mt-2">${product.price.toFixed(2)}</p>
+                    </div>
+          
+                    <motion.p
+                      whileHover={{ scale: 1.1 }}
+                      className="inline-flex items-center justify-center bg-green-600 text-white rounded hover:bg-green-700 max-h-12 mx-1 px-3"
+                    >
+                      View Product
+                    </motion.p>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
             ))}
           </motion.div>
         </div>

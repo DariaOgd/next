@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image'; 
 import products from '../../../public/data/products.json';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
 
 const AllProducts = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -64,25 +66,35 @@ const AllProducts = () => {
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredProducts.map(product => (
+          {filteredProducts.map((product) => (
             <Link href={`/products/${product.id}`} key={product.id}>
-              <div className="bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+              <div className="card h-104">
                 <Image
                   src={product.image}
                   alt={product.name}
                   width={300}
                   height={200}
-                  className="rounded-t-lg object-cover"
+                  className="card-img"
                 />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-green-900">{product.name}</h3>
-                  <p className="text-green-700 font-semibold mt-2">${product.price.toFixed(2)}</p>
+                <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex flex-col">
+                    <h3 className="text-base font-bold text-green-900">{product.name}</h3>
+                    <p className="text-green-700 font-semibold mt-2">${product.price.toFixed(2)}</p>
+                  </div>
+                  <motion.p
+                    whileHover={{ scale: 1.1 }}
+                    className="mt-4 inline-block bg-green-600 max-w-30 text-white text-base
+                    p-2 text-center rounded hover:bg-green-700 self-start sm:self-center max-md:text-sm">
+                    View Product
+                  </motion.p>
                 </div>
               </div>
             </Link>
           ))}
         </div>
+
       </div>
+      <Footer/>
     </div>
   );
 };

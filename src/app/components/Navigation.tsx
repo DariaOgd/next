@@ -18,7 +18,6 @@ export default function Navigation() {
 
         
         <div className="flex items-center space-x-4 right">
-          <li><a href="/about" className="hover:underline">About</a></li>
           <li className="relative">
             <a href="/Cart" className="flex items-center">
               <FaShoppingCart className="text-xl" />

@@ -2,6 +2,7 @@
 
 import { useCart } from '@/app/context/cartContext';
 import Navigation from "@/app/components/Navigation";
+import Footer from '../components/Footer';
 import { useRouter } from 'next/navigation';
 import { FaShoppingCart } from 'react-icons/fa';
 
@@ -110,6 +111,7 @@ export default function CartPage() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
