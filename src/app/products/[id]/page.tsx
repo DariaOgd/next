@@ -121,8 +121,8 @@ export default function ProductPage({ params }: ProductPageProps) {
               src={product.image}
               alt={product.name}
               width={600}
-              height={400}
-              className="rounded-lg shadow-lg object-cover w-full"
+              height={300}
+              className="rounded-lg shadow-lg object-cover max-w-100 max-h-100"
             />
           </div>
           <div>
@@ -138,18 +138,19 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <select
                   value={selectedWeight}
                   onChange={(e) => setSelectedWeight(e.target.value)}
-                  className="mt-1 block w-full text-green-900 p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
-                >
-                  <option value="50">50g</option>
-                  <option value="100">100g</option>
-                  <option value="150">150g</option>
+                  className="mt-1 block w-full text-black  p-2
+                  border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+                  >
+                  <option className="hover:text-darkmatcha" value="50">50g</option>
+                  <option className="hover:text-darkmatcha" value="100">100g</option>
+                  <option className="hover:text-darkmatcha " value="150">150g</option>
                 </select>
               </div>
             )}
 
             <button
               onClick={handleAddToCart}
-              className="mt-8 px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+              className="mt-8 px-6 py-3 block w-full bg-green-600 text-white rounded-lg shadow hover:bg-green-700 active:bg-green-500 transition-all"
             >
               Add to Cart
             </button>
@@ -158,7 +159,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 
 
         <div className="mt-12">
-          <h2 className="text-2xl font-bold text-green-900 mb-4">Reviews</h2>
+          <h2 className="text-2xl font-bold text-center text-green-900 mb-4">Reviews</h2>
           {reviews.length > 0 ? (
             <ul className="space-y-4">
               {reviews.map((review, index) => (
@@ -192,7 +193,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               value={newUsername}
               onChange={(e) => setNewUsername(e.target.value)}
               type="text"
-              className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+              className="w-full xl:max-w-60 p-2 border border-gray-300 rounded-lg shadow-sm text-darkmatcha"
               placeholder="Enter your name..."
             />
           </div>
@@ -202,7 +203,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
               rows={4}
-              className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+              className="w-full xl:max-w-110 p-2 border border-gray-300 rounded-lg shadow-sm text-darkmatcha"
               placeholder="Write your review..."
             ></textarea>
           </div>
@@ -228,7 +229,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
           <button
             onClick={handleAddReview}
-            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 active:bg-green-500 transition-all"
           >
             Submit Review
           </button>

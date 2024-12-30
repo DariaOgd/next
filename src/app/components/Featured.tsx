@@ -61,7 +61,7 @@ export default function Featured() {
           
                     <motion.p
                       whileHover={{ scale: 1.1 }}
-                      className="inline-flex items-center justify-center bg-green-600 text-white rounded hover:bg-green-700 max-h-12 mx-1 px-3"
+                      className="inline-flex items-center justify-center bg-green-600 text-white rounded hover:bg-green-700 xl:max-h-12 mx-1 max-sm:p-1 px-3  active:bg-green-500 transition-all"
                     >
                       View Product
                     </motion.p>

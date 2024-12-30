@@ -45,7 +45,7 @@
       "category": "Kits",
       "subcategory": "Latte",
       "price": 34.99,
-      "image": "/images/hojicha-latte-kit.jpg",
+      "image": "/products/hojicha-latte-kit.jpg",
       "desc": "Vestibulum molestie elit et nisi elementum, ut scelerisque eros ultricies. Nam auctor vel erat non consequat.",
       "origin": "Japan"
   },
@@ -55,7 +55,7 @@
       "category": "Kits",
       "subcategory": "Traditional",
       "price": 59.99,
-      "image": "/images/traditional-matcha-set.jpg",
+      "image": "/products/traditional-matcha-set.jpg",
       "desc": "Phasellus in turpis id purus vehicula congue. Donec vulputate erat at diam ultrices, at dignissim metus lacinia.",
       "origin": "Japan"
   },
@@ -65,7 +65,7 @@
       "category": "Accessories",
       "subcategory": "Tools",
       "price": 12.99,
-      "image": "/images/matcha-sifter.jpg",
+      "image": "/products/matcha-sifter.jpg",
       "desc": "Mauris vel magna eget eros vehicula venenatis. Suspendisse potenti. Curabitur aliquam lacus sed metus.",
       "origin": "China"
   }

@@ -17,7 +17,7 @@ export default function Hero() {
             <div className="mt-6">
               <a
                 href="/AllProducts"
-                className="px-6 py-3 bg-green-600 text-white font-medium text-lg rounded-md shadow-lg hover:bg-green-700"
+                className="px-6 py-3 bg-green-600 text-white font-medium text-lg rounded-md shadow-lg hover:bg-green-700  active:bg-green-500 transition-all"
               >
                 Shop Now
               </a>

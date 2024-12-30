@@ -44,7 +44,7 @@ const AllProducts = () => {
                 selectedCategory === category || (category === "Show All" && selectedCategory === null)
                   ? 'bg-green-600 text-white'
                   : 'bg-white text-green-900 border border-green-600'
-              } hover:bg-green-700 hover:text-white transition duration-300`}
+              } hover:bg-green-700 hover:text-white  active:bg-green-500 transition-all`}
             >
               {category}
             </button>
@@ -68,7 +68,7 @@ const AllProducts = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
             <Link href={`/products/${product.id}`} key={product.id}>
-              <div className="card h-104">
+              <div className="card xl:h-104">
                 <Image
                   src={product.image}
                   alt={product.name}

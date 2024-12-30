@@ -16,14 +16,20 @@ export default {
           900: '#064e3b', 
         },
         graymatcha: '#99b09f',
-        matcha: '',
+        matcha: '#8ba888',
+        darkmatcha: '#44624a',
+        lightmatcha:'#c0cfb2',
       },
       fontSize: {
         'xxs': '0.7rem',
         'xxxs': '0.6rem',
       },
       height:{
+        '120':'40rem',
+        '110':'27rem',
         '104':'25rem',
+        '100':'15rem',
+        '98':'14rem',
       }
     },
   },

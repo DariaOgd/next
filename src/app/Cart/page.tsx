@@ -19,12 +19,13 @@ export default function CartPage() {
             <h1 className="text-3xl font-bold text-green-900 mb-4">
               Your Cart is Empty
             </h1>
-            <p className="text-gray-600 mb-6">
+            <p className="text-darkmatcha mb-6">
               Add some delicious matcha products to your cart and come back here to review your order.
             </p>
             <a
               href="/AllProducts"
-              className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition duration-300"
+              className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 
+               active:bg-green-500 transition-all"
             >
               Browse Products
             </a>
@@ -74,7 +75,7 @@ export default function CartPage() {
                 </div>
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  className="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition duration-300"
+                  className="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 active:bg-red-400 transition-all"
                 >
                   Remove
                 </button>
@@ -82,7 +83,7 @@ export default function CartPage() {
             ))}
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
+          <div className="bg-white rounded-lg shadow-lg p-6 max-h-80">
             <h2 className="text-2xl font-bold text-green-800">Order Summary</h2>
             <div className="mt-4 border-t pt-4">
               <div className="flex justify-between mb-4">
@@ -96,7 +97,7 @@ export default function CartPage() {
                 <span className="text-green-800 font-medium">$5.00</span>
               </div>
               <div className="flex justify-between border-t pt-4 text-lg font-bold">
-                <span>Total:</span>
+                <span className='text-darkmatcha'>Total:</span>
                 <span className="text-green-900">
                   ${(total + 5).toFixed(2)}
                 </span>
@@ -104,7 +105,7 @@ export default function CartPage() {
             </div>
             <button
               onClick={handleProceedToCheckout}
-              className="mt-6 w-full py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition duration-300 text-lg font-medium"
+              className="mt-6 w-full py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700  active:bg-green-500 transition-all text-lg font-medium"
             >
               Proceed to Checkout
             </button>
