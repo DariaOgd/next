@@ -1,1 +1,1 @@
-- projekt w pliku src/app
+- projekt w src/app
